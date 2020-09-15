@@ -1,1 +1,2 @@
- <%= $twitter_client.user_timeline('tancrediVittore', count: 10) %>
+ <%= tweets = $twitter_client.user_timeline('tancrediVittore', count: 10) %>
+<p><%= tweets.each { |tweet| puts tweet.full_text } %></p>
